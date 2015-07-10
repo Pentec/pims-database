@@ -1,9 +1,7 @@
-
 {
   "name": "pims-database",
   "version": "0.0.1",
   "scripts": {},
-  "description": "Module that handles the Mongoose database connection",
   "dependencies": {
     "mongoose": "^4.0.6"
   },
@@ -12,7 +10,7 @@
   },
   "main": "./database.js",
   "_id": "pims-database@0.0.1",
-  "_shasum": "",
+  "_shasum": "5a8e746eaa06cd63799b7f22bc17a2100f9c2eef",
   "_from": "pims-database@>=0.0.1",
   "_npmVersion": "1.4.23",
   "_npmUser": {
@@ -32,8 +30,14 @@
   ],
   "dist": {
     "shasum": "ce5aee6a1ae09488636a0368adaec6374659b395",
-    "tarball": ""
+    "tarball": "http://localhost:4873/pims-database/-/pims-database-0.0.1.tgz"
   },
-  "_resolved": "",
-  "readme": "ERROR: No README data found!"
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "_resolved": "http://localhost:4873/pims-database/-/pims-database-0.0.1.tgz",
+  "readme": "README.md",
+  "bugs": {
+    "url": "https://github.com/Pentec/pims-database/issues"
+  }
 }
