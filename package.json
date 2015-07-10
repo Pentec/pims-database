@@ -3,6 +3,7 @@
   "name": "pims-database",
   "version": "0.0.1",
   "scripts": {},
+  "description": "Module that handles the Mongoose database connection",
   "dependencies": {
     "mongoose": "^4.0.6"
   },
