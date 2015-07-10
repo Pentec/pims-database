@@ -1,1 +1,38 @@
 
+{
+  "name": "pims-database",
+  "version": "0.0.1",
+  "scripts": {},
+  "dependencies": {
+    "mongoose": "^4.0.6"
+  },
+  "devDependencies": {
+    "unit.js": "^1.1.3"
+  },
+  "main": "./database.js",
+  "_id": "pims-database@0.0.1",
+  "_shasum": "",
+  "_from": "pims-database@>=0.0.1",
+  "_npmVersion": "1.4.23",
+  "_npmUser": {
+    "name": "liz jopseph",
+    "email": "lizjopseph@tuks.co.za"
+  },
+  "homepage": "https://github.com/Pentec/pims-database",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pentec/pims-database.git"
+  },
+  "maintainers": [
+    {
+      "name": "liz jopseph",
+      "email": "lizjopseph@tuks.co.za"
+    }
+  ],
+  "dist": {
+    "shasum": "ce5aee6a1ae09488636a0368adaec6374659b395",
+    "tarball": ""
+  },
+  "_resolved": "",
+  "readme": "ERROR: No README data found!"
+}
