@@ -2,9 +2,7 @@
   "name": "pims-database",
   "version": "0.0.1",
   "scripts": {},
-  "dependencies": {
-    "mongoose": "^4.0.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "unit.js": "^1.1.3"
   },
