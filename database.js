@@ -1,38 +1,49 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
+mongoose.connect('mongodb://Admin:qYMqsW5Z@ds033601.mongolab.com:33601/pentec_pims');
 
-
-var Form = new Schema({  
-	form_name			: String,
-	data				: String,
-	is_deleted			: Boolean
+mongoose.connection.on('error', function(err) {
+    console.error('MongoDB error: %s', err);
 });
 
-var Users = new Schema({          
-	username				: String,
-	surname					: String,
-	email					: String,
-	profile_pic				: String,
-	user_rights				: Number,
-	password				: String,
-	department				: String,
-	staff_type				: String
+mongoose.connection.once('open', function () {
+    console.log('connected.');
+
 });
 
-var Patient = new Schema({          
-	patient_name			: String,
-	patient_surname			: String,
-	contact_number			: Number,
-	email_address			: String,
-	physical_address		: String
+
+var Form = new Schema({
+    form_name			: String,
+    data			: String,
+    is_deleted			: Boolean
 });
 
-var Statistics = new Schema({          
-	patient_id				: String,
-	patient_name			: String,
-	doctor_name				: String,
-	procedure_name			: String,
-	demographics			: String
+var Users = new Schema({
+    username				: String,
+    surname				: String,
+    email				: String,
+    profile_pic				: String,
+    user_rights				: Number,
+    password				: String,
+    department				: String,
+    staff_type				: String
+});
+
+
+var Patient = new Schema({
+    patient_name			: String,
+    patient_surname			: String,
+    contact_number			: Number,
+    email_address			: String,
+    physical_address			: String
+});
+
+var Statistics = new Schema({
+    patient_id				: String,
+    patient_name			: String,
+    doctor_name				: String,
+    procedure_name			: String,
+    demographics			: String
 });
 
 
@@ -40,5 +51,3 @@ mongoose.model('forms', Form);
 mongoose.model('patient', Patient);
 mongoose.model('statistics', Statistics);
 mongoose.model('users', Users);
-
-mongoose.connect('mongodb://Admin:qYMqsW5Z@ds033601.mongolab.com:33601/pentec_pims');
