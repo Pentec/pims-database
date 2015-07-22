@@ -7,7 +7,7 @@ mongoose.connection.on('error', function(err) {
 });
 
 mongoose.connection.once('open', function () {
-    console.log('connected.');
+    console.log('connected to database.');
 
 });
 
@@ -67,8 +67,8 @@ var GynaecologySurgery = new Schema({
 	OtherComplications: {type: String, title : 'Other Complications'}
 });
 
-mongoose.model('gynaecologySurgery', GynaecologySurgery);
-mongoose.model('forms', Form);
-mongoose.model('patient', Patient);
-mongoose.model('statistics', Statistics);
-mongoose.model('users', Users);
+module.exports = mongoose.model('gynaecologySurgery', GynaecologySurgery);
+module.exports = mongoose.model('forms', Form);
+module.exports = mongoose.model('patient', Patient);
+module.exports = mongoose.model('statistics', Statistics);
+module.exports = mongoose.model('users', Users);
