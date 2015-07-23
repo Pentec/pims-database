@@ -68,8 +68,8 @@ var GynaecologySurgery = new Schema({
 });
 
 
-module.exports = mongoose.model('forms', Form);
-module.exports = mongoose.model('users', Users);
-module.exports = mongoose.model('patient', Patient);
-module.exports = mongoose.model('statistics', Statistics);
-module.exports = mongoose.model('gynaecologySurgery', GynaecologySurgery);
+mongoose.model('forms', Form);
+mongoose.model('users', Users);
+mongoose.model('patient', Patient);
+mongoose.model('statistics', Statistics);
+mongoose.model('gynaecologySurgery', GynaecologySurgery);
