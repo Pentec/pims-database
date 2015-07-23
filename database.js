@@ -67,8 +67,9 @@ var GynaecologySurgery = new Schema({
 	OtherComplications: {type: String, title : 'Other Complications'}
 });
 
-module.exports = mongoose.model('gynaecologySurgery', GynaecologySurgery);
+
 module.exports = mongoose.model('forms', Form);
+module.exports = mongoose.model('users', Users);
 module.exports = mongoose.model('patient', Patient);
 module.exports = mongoose.model('statistics', Statistics);
-module.exports = mongoose.model('users', Users);
+module.exports = mongoose.model('gynaecologySurgery', GynaecologySurgery);
