@@ -58,18 +58,19 @@ var GynaecologySurgery = new Schema({
 	
         Surname: {type: String, require: true, title: 'Surname'},
 	
-	P: {type: Boolean, title: 'P'}, 
-	G: {type: Boolean, title: 'G'}, 
-	M: {type: Boolean, title: 'M'}, 
-	E: {type: Boolean, title: 'E'},
-        HIVStatus: {type: String, title: 'HIV Status'}, 
+	P: {type: Number , title: 'Parity'},
+	G: {type: Number, title: 'Gravidity'},
+	M: {type: Number, title: 'Miscarriage'},
+	E: {type: Number, title: 'Ectopic pregnancy'},
+
+    HIVStatus: {type: String, title: 'HIV Status'},
 	
-	CD4: {type: Number, title: 'CD4'}, 
+	CD4: {type: Number, title: 'CD4'},
 	
-        Elective: {type: Boolean, title: 'Elective'}, 
+    Elective: {type: Boolean, title: 'Elective'},
 	Emergency: {type: Boolean, title: 'Emergency'},
 	
-        G1: {type: Boolean, title: 'G1'}, 
+    G1: {type: Boolean, title: 'G1'},
 	G2: {type: Boolean, title: 'G2'}, 
 	G3: {type: Boolean, title: 'G3'}, 
 	ONC: {type: Boolean, title: 'ONC'},
