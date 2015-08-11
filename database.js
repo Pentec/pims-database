@@ -63,42 +63,56 @@ var GynaecologySurgery = new Schema({
 	M: {type: Number, title: 'Miscarriage'},
 	E: {type: Number, title: 'Ectopic pregnancy'},
 
-    HIVStatus: {type: String, title: 'HIV Status'},
+	HIV:{
+		HIVStatus: {type: String, title: 'HIV Status'},
+		CD4: {type: Number, title: 'CD4'}
+	      },
+
+	typeOfProcedure: {
+		Elective: {type: Boolean, title: 'Elective'},
+		Emergency: {type: Boolean, title: 'Emergency'}
+           },
 	
-	CD4: {type: Number, title: 'CD4'},
+	 firm:{ 
+		G1: {type: Boolean, title: 'G1'},
+		G2: {type: Boolean, title: 'G2'}, 
+		G3: {type: Boolean, title: 'G3'}, 
+		ONC: {type: Boolean, title: 'ONC'}
+         },
 	
-    Elective: {type: Boolean, title: 'Elective'},
-	Emergency: {type: Boolean, title: 'Emergency'},
+	categoryOfProcedure:{
+		Oncology: {type: Boolean, title: 'Oncology'}, 
+		GeneralGynae: {type: Boolean, title: 'General Gynaecology'},
+		Infertility: {type: Boolean, title: 'Infertility'}, 
+		Urologynaecology: {type: Boolean, title: 'Urologynaecology'}
+	},
 	
-    G1: {type: Boolean, title: 'G1'},
-	G2: {type: Boolean, title: 'G2'}, 
-	G3: {type: Boolean, title: 'G3'}, 
-	ONC: {type: Boolean, title: 'ONC'},
+	typeOfAccess:{
+		OpenAbdomen: {type: Boolean, title: 'Open Abdomen'},
+		Endoscopy: {type: Boolean, title: 'Endoscopy'}, 
+		Vaginal: {type: Boolean, title: 'Vaginal'}
+	},
+
+    preOperICD10Codes: [{type: String, title: 'Pre-Operative Diagnosis ICD Code:'}],
 	
-	Oncology: {type: Boolean, title: 'Oncology'}, 
-	GeneralGynae: {type: Boolean, title: 'General Gynaecology'},
-	Infertility: {type: Boolean, title: 'Infertility'}, 
-	Urologynaecology: {type: Boolean, title: 'Urologynaecology'},
-	
-       OpenAbdomen: {type: Boolean, title: 'Open Abdomen'},
-       Endoscopy: {type: Boolean, title: 'Endoscopy'}, 
-       Vaginal: {type: Boolean, title: 'Vaginal'},
-        PreOperICD10Codes: [{type: String, title: 'Pre-Operative Diagnosis ICD Code:'}],
-	
-	Consultant: {type: Boolean, title: 'Consultant'}, 
-	Fellow: {type: Boolean, title: 'Fellow'}, 
-	Registrar: {type: Boolean, title: 'Registrar'},
-	Intern: {type: Boolean, title: 'Intern'},
+	performedBy:{
+		Consultant: {type: Boolean, title: 'Consultant'}, 
+		Fellow: {type: Boolean, title: 'Fellow'}, 
+		Registrar: {type: Boolean, title: 'Registrar'},
+		Intern: {type: Boolean, title: 'Intern'}
+	},
        
 	DygnosisNotOnICD10List: [{type: String, title: 'Diagnosis if not on ICD 10 list'}],
 	
 	ProPerformedCode: [{type: String, title: 'Procedure(s) Performed(Code) :'}],
 	
-	None: {type: Boolean, title: 'None'},
-	BladderInjury: {type: Boolean, title: 'Bladder Injury'}, 
-	BowelInjury: {type: Boolean, title: 'Bowel Injury'}, 
-	BRUBT: {type: Boolean, title: 'BRUBT'}, 
-	ProcedureNotCompleted: {type: Boolean, title: 'Procedure Not Completed'},
+	IntraOperativeComplications:{
+		None: {type: Boolean, title: 'None'},
+		BladderInjury: {type: Boolean, title: 'Bladder Injury'}, 
+		BowelInjury: {type: Boolean, title: 'Bowel Injury'}, 
+		BRUBT: {type: Boolean, title: 'Bleeding requiring unplanned blood transfusion'}, 
+		ProcedureNotCompleted: {type: Boolean, title: 'Procedure Not Completed'}
+	},
 	
 	OtherComplications: {type: String, title : 'Other Complications'}
 });
@@ -118,7 +132,7 @@ var AdmissionDischarge = new Schema({
 	DateofAdmission: {type: Date, require: true, title: 'Date of Admission' },
 	
 	
-	G1: {type: Boolean, title: 'G1'}, 
+	G1: {type: Boolean, title: 'G1'},
 	G2: {type: Boolean, title: 'G2'}, 
 	G3: {type: Boolean, title: 'G3'}, 
 	ONC: {type: Boolean, title: 'ONC'},
@@ -133,8 +147,8 @@ var AdmissionDischarge = new Schema({
 	M: {type: Boolean, title: 'M'}, 
 	E: {type: Boolean, title: 'E'},
 	
-        HIVStatus: {type: String, title: 'HIV Status'}, 
-	CD4: {type: Number, title: 'CD4'}, 
+	HIV: {HIVStatus: {type: String, title: 'HIV Status'},
+	CD4: {type: Number, title: 'CD4'}},
 	
 	
 	DateofDischarge: {type: Date, require: true, title: 'Date of Discharge' },
