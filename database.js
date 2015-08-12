@@ -131,26 +131,31 @@ var AdmissionDischarge = new Schema({
 	
 	DateofAdmission: {type: Date, require: true, title: 'Date of Admission' },
 	
-	
-	G1: {type: Boolean, title: 'G1'},
-	G2: {type: Boolean, title: 'G2'}, 
-	G3: {type: Boolean, title: 'G3'}, 
-	ONC: {type: Boolean, title: 'ONC'},
-	
 
-	Emergency: {type: Boolean, title: 'Emergency'},
-	ElectiveSurgery: {type: Boolean, title: 'Elective Surgery'}, 
-	ElectiveOther: {type: Boolean, title: 'Elective Other'}, 
+	firm:{
+		G1: {type: Boolean, title: 'G1'},
+		G2: {type: Boolean, title: 'G2'}, 
+		G3: {type: Boolean, title: 'G3'}, 
+		ONC: {type: Boolean, title: 'ONC'}
+	},
 	
-	P: {type: Boolean, title: 'P'}, 
-	G: {type: Boolean, title: 'G'}, 
-	M: {type: Boolean, title: 'M'}, 
-	E: {type: Boolean, title: 'E'},
+	Admission:{
+		Emergency: {type: Boolean, title: 'Emergency'},
+		ElectiveSurgery: {type: Boolean, title: 'Elective Surgery'}, 
+		ElectiveOther: {type: Boolean, title: 'Elective Other'}
+	},
 	
-	HIV: {HIVStatus: {type: String, title: 'HIV Status'},
-	CD4: {type: Number, title: 'CD4'}},
+	P: {type: Number , title: 'Parity'},
+	G: {type: Number, title: 'Gravidity'},
+	M: {type: Number, title: 'Miscarriage'},
+	E: {type: Number, title: 'Ectopic pregnancy'},
+
 	
-	
+	HIV: {
+		HIVStatus: {type: String, title: 'HIV Status'},
+		CD4: {type: Number, title: 'CD4'}
+		},
+		
 	DateofDischarge: {type: Date, require: true, title: 'Date of Discharge' },
 	
 	TotalNumberOfDaysHospital: {type: Number, require: true, title: 'Total Number of Days in Hospital'},
@@ -162,6 +167,44 @@ var AdmissionDischarge = new Schema({
 	DaysInHighCare: {type: Number, require: true, title: 'Days in High Care'},
 	
 	FinalDiagnosisOnDischarge: [{type: String, title: 'Final diagnosis on discharge (ICD 10)'}],
+	
+		Miscarriage:{
+		Threatening: {type: Boolean, title: 'Threatening'},
+		Complete: {type: Boolean, title: 'Complete'},
+		Incomplete: {type: Boolean, title: 'Incomplete'},
+		Septic: {type: Boolean, title: 'Septic'}
+	},
+	Salpingitis:{
+		ASOI: {type: Boolean, title: 'ASO I'},
+		ASOII: {type: Boolean, title: 'ASO II'},
+		ASOIII: {type: Boolean, title: 'ASO III'},
+		ASOIV: {type: Boolean, title: 'ASO IV'}
+	},
+	Ectopic:{
+		Ruptured: {type: Boolean, title: 'Ruptured'},
+		Unruptured: {type: Boolean, title: 'Unruptured'}
+	},
+	BBA: {type: Boolean, title: 'BBA'},
+	OtherDiagnosis:{type: Boolean, title: 'Other'},
+	Oncology:{
+		Cervix: {type: Boolean, title: 'Cervix'},
+		Endometrium: {type: Boolean, title: 'Endometrium'},
+		Ovarian: {type: Boolean, title: 'Ovarian'},
+		Vulva: {type: Boolean, title: 'Vulva'},
+		Vagina: {type: Boolean, title: 'Vagina'},
+		ChorioGTD: {type: Boolean, title: 'Chorio/GTD'}
+	},
+	
+	PostOperativeComplications: {
+		None: {type: Boolean, title: 'None'},
+		BladderInjury: {type: Boolean, title: 'Bladder injury'},
+		BowelInjury: {type: Boolean, title: 'Bowel injury'},
+		UretericInjury: {type: Boolean, title: 'Ureteric injury'},
+		AnaestheticComplication: {type: Boolean, title: 'Anaesthetic complication'},
+		ProcedureNotCompleted: {type: Boolean, title: 'Procedure not completed'},
+		BRUBT: {type: Boolean, title: 'Bleeding requiring unplanned blood transfusion'},
+		VascularInjury: {type: Boolean, title: 'Vascular injury'}
+	},
 	
 	OtherComplications: {type: String, title : 'Other complications or reasons for non completion or anaesthetic complication '}
 });
