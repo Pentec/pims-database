@@ -924,10 +924,7 @@ var statistics = mongoose.model('statistics', Statistics);
 var gynaecologySurgery = mongoose.model('gynaecologySurgery', GynaecologySurgery);
 var addmissionDischarge = mongoose.model('addmissionDischarge', AdmissionDischarge);
 var cervicalCancer = mongoose.model('cervicalCancer', CervicalCancer);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
+var endometrialCancer = mongoose.model('endometrialCancer', EndometrialCancer);
 
 module.exports = { 
 	forms: forms,
@@ -936,9 +933,7 @@ module.exports = {
 	statistics: statistics,
 	gynaecologySurgery: gynaecologySurgery,
 	addmissionDischarge: addmissionDischarge,
-<<<<<<< HEAD
 	cervicalCancer: cervicalCancer
-=======
-    cervicalCancer: cervicalCancer
->>>>>>> origin/master
+	endometrialCancer: endometrialCancer
+
 	};
