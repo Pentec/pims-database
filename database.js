@@ -18,18 +18,6 @@ var Form = new Schema({
     is_deleted			: Boolean
 });
 
-var Users = new Schema({
-    username				: String,
-    surname				: String,
-    email				: String,
-    profile_pic				: String,
-    user_rights				: Number,
-    password				: String,
-    department				: String,
-    staff_type				: String
-});
-
-
 var Patient = new Schema({
     patient_name			: String,
     patient_surname			: String,
@@ -1156,7 +1144,7 @@ var DataCollection = new Schema({
 		
 		InappropriateFacility_b: 
 		{
-		PalliativeCare: {type: Boolean, title: 'Palliative care in 2°/3° hosp'}
+		PalliativeCare: {type: Boolean, title: 'Palliative care in 2Â°/3Â° hosp'}
 		},
 	}
 		
@@ -1352,7 +1340,6 @@ var DataCollection = new Schema({
 
 
 var forms = mongoose.model('forms', Form);
-var users = mongoose.model('users', Users);
 var patient =  mongoose.model('patient', Patient);
 var statistics = mongoose.model('statistics', Statistics);
 var gynaecologySurgery = mongoose.model('gynaecologySurgery', GynaecologySurgery);
@@ -1362,7 +1349,6 @@ var endometrialCancer = mongoose.model('endometrialCancer', EndometrialCancer);
 
 module.exports = { 
 	forms: forms,
-	users: users,
 	patient: patient,
 	statistics: statistics,
 	gynaecologySurgery: gynaecologySurgery,
