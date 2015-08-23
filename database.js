@@ -103,7 +103,11 @@ var GynaecologySurgery = new Schema({
 		ProcedureNotCompleted: {type: Boolean, title: 'Procedure Not Completed'}
 	},
 
-	OtherComplications: {type: String, title : 'Other Complications'}
+	OtherComplications: {type: String, title : 'Other Complications'},
+
+    isNotCompeleted: {type: Boolean, default: false, title : 'Complete form later?'},
+    completedBy: {type: String}
+
 });
 
 var AdmissionDischarge = new Schema({
@@ -195,7 +199,9 @@ var AdmissionDischarge = new Schema({
 		VascularInjury: {type: Boolean, title: 'Vascular injury'}
 	},
 
-	OtherComplications: {type: String, title : 'Other complications or reasons for non completion or anaesthetic complication '}
+	OtherComplications: {type: String, title : 'Other complications or reasons for non completion or anaesthetic complication '},
+    isNotCompeleted: {type: Boolean, default: false, title : 'Complete form later?'},
+    completedBy: {type: String}
 });
 
 var CervicalCancer = new Schema({
@@ -433,7 +439,10 @@ var CervicalCancer = new Schema({
 		Intercurrentdisease: {type: Boolean, title: 'Intercurrent disease'},
 		Unknowncauses: {type: Boolean, title: 'Unknown causes'},
 		DateOfDeath: {type: Date, require: true, title: 'Date of Death'}
-	}
+	},
+
+    isNotCompeleted: {type: Boolean, default: false, title : 'Complete form later?'},
+    completedBy: {type: String}
 });
 
 var forms = mongoose.model('forms', Form);
