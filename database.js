@@ -487,7 +487,7 @@ var EndometrialCancer = new Schema({
         Clearcell: {type: Boolean, title: 'Clear cell'},
         MucinousAdeno: {type: Boolean, title: 'Mucinous adeno '},
         PapillarySerous: {type: Boolean, title: 'Papillary serous'},
-	Squamous: {type: Boolean, title: 'Squamous'},
+	    Squamous: {type: Boolean, title: 'Squamous'},
         Other: {type: Boolean, title: 'Other'},
         Unknown : {type: Boolean, title: 'Unknown'}
     },
@@ -496,7 +496,7 @@ var EndometrialCancer = new Schema({
         Well: {type: Boolean, title: '1 (well)'},
         Moderately: {type: Boolean, title: '2 (moderately)'},
         Poorly: {type: Boolean, title: '3 (poorly)'},
-	Unknown : {type: Boolean, title: 'Unknown'}
+	   Unknown : {type: Boolean, title: 'Unknown'}
     },
     
     LymphovascularSpaceInvolvement: {
@@ -509,11 +509,11 @@ var EndometrialCancer = new Schema({
 primaryTreatmentPerformed : {
         Nil: {type: Boolean, title: 'Nil'},
         SurgeryAlone: {type: Boolean, title: 'Surgery alone'},
-	SurgeryAdjuvantRT: {type: Boolean, title: 'Surgery + adjuvant RT'},
-	SurgeryAdjuvantCT: {type: Boolean, title: 'Surgery + adjuvant CT'},
-	AdjuvantHT: {type: Boolean, title: 'Adjuvant HT'},
-	HormonalPrimaryTherapy: {type: Boolean, title: 'Hormonal primary therapy'},
-	Other : {type: Boolean, title: 'Other non standard treatments'},
+	   SurgeryAdjuvantRT: {type: Boolean, title: 'Surgery + adjuvant RT'},
+	   SurgeryAdjuvantCT: {type: Boolean, title: 'Surgery + adjuvant CT'},
+	     AdjuvantHT: {type: Boolean, title: 'Adjuvant HT'},
+	  HormonalPrimaryTherapy: {type: Boolean, title: 'Hormonal primary therapy'},
+	  Other : {type: Boolean, title: 'Other non standard treatments'},
         Unknown : {type: Boolean, title: 'Unknown'},
 	DateofTreatment : {type: Date, require: true, title: 'Date of treatment'}
     },
@@ -1326,7 +1326,7 @@ var OverianCancer = new Schema({
         BorderlineEndometroidCystadenoma: {type: Boolean, title: 'Borderline endometroid cystadenoma'},
         UndifferentiatedCarcinoma: {type: Boolean, title: 'Undifferentiated carcinoma '},
         MixedEpithelialTumor: {type: Boolean, title: 'Mixed epithelial tumor'},
-	EndometroidCystadenocarcinoma: {type: Boolean, title: 'Endometroid  cystadenocarcinoma'},
+	    EndometroidCystadenocarcinoma: {type: Boolean, title: 'Endometroid  cystadenocarcinoma'},
         ClearCellCystadenocarcinoma: {type: Boolean, title: 'Clear cell cystadenocarcinoma'},
         SerousCystadenocarcinoma : {type: Boolean, title: 'Serous cystadenocarcinoma'},
         MucinousCystadenocarcinoma : {type: Boolean, title: 'Mucinous cystadenocarcinoma'},
@@ -1356,7 +1356,7 @@ var OverianCancer = new Schema({
         /*--(LND = pelvic/paraortic lymphnode dissection; USO: Unilateral oopherectomy; BSO Bilateral oopherectomy)--*/
 typeOfSurgery: {
         USONoLND: {type: Boolean, title: 'USO without LND'},
-	USOWithLND: {type: Boolean, title: 'USO with LND'},
+	 	USOWithLND: {type: Boolean, title: 'USO with LND'},
         BSONoLND: {type: Boolean, title: 'BSO without LND'},
         BSOWithLND: {type: Boolean, title: 'BSO with LND'},
         multipleBiopsiesNoLND: {type: Boolean, title: 'TAH, BSO, Omentectomy, multiple biopsies no LND'},
@@ -1418,7 +1418,7 @@ typeOfSurgery: {
     SizeOfTumorOutsideOvaryAtOpeningOfAbdomen: {
         NoMacroscopicDisease: {type: Boolean, title: 'No macroscopic disease'},
         LTE2cm: {type: Boolean, title: '=< 2cm'},
-	Between2And10 : {type: Boolean, title: 'Between 2 and 10 cm'},
+	    Between2And10 : {type: Boolean, title: 'Between 2 and 10 cm'},
         GTE10cm: {type: Boolean, title: '>= 10cm'},
         Unknown: {type: Boolean, title: 'Unknown'}
     },
@@ -1719,7 +1719,7 @@ AssociatedLesions: {
         Inguinal: {type: Number, title: 'Inguinal'}
 	},
     
-    	InguinalNodes_involvementCharacteristics:{
+    InguinalNodes_involvementCharacteristics:{
 		    UnilateralIntracapsular: {type:Boolean, title: 'Unilateral intracapsular'},
 		    UnilateralExtracapsular:{type:Boolean, title: 'Unilateral extracapsular'},
 		    BilateralIntracapsular: {type:Boolean, title: 'Bilateral intracapsular'},
@@ -1796,6 +1796,8 @@ GTN
 vagimal
 vulva
 */
+
+
 
 module.exports = {
 	forms: forms,
