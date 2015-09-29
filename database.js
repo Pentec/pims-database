@@ -30,7 +30,7 @@ var Patient = new Schema({
 var Statistics = new Schema({
 	patient_id				: String,
 	patient_name			: String,
-	doctor_name				: String,
+	doctor_name			: String,
 	procedure_name			: String,
 	demographics			: String
 });
